@@ -1,0 +1,1 @@
+Student *st = ("Sait", 663, 21);
