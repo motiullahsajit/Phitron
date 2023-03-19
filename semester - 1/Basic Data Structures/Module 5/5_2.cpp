@@ -4,36 +4,37 @@ using namespace std;
 
 int main()
 {
-    int t;
-    cin >> t;
 
-    for (int i = 0; i < t; i++)
+    int n, q, v;
+
+    cin >> n;
+
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+
+    sort(arr.begin(), arr.end());
+
+    cin >> q;
+
+    for (int i = 0; i < q; i++)
     {
-        int n, k;
-
-        cin >> n >> k;
-
-        vector<int> arr(n);
-
-        for (int i = 0; i < n; i++)
-            cin >> arr[i];
-
-        sort(arr.begin(), arr.end());
-
+        cin >> v;
         int front = 0, back = n - 1, mid, flag = 0;
 
         while (front <= back)
         {
             mid = (front + back) / 2;
 
-            if (arr[mid] == k)
+            if (arr[mid] == v)
             {
                 flag = 1;
-                cout << k << " Found in " << mid << "\n";
+                cout << v << " Found in " << mid << "\n";
                 break;
             }
 
-            if (arr[mid] < k)
+            if (arr[mid] < v)
                 front = mid + 1;
             else
                 back = mid - 1;
