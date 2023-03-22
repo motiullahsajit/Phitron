@@ -2,6 +2,10 @@
 
 using namespace std;
 
+// space complexity = O(n)
+// n + n/2 + n/3 + n/4 + n/5 + n/6 .....
+// time complexity = O(n.log(n))
+
 int main()
 {
 

@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+// ((n-1) * n) /2
+// time complexity = O(n^2)
+// space complexity = O(n)
 
 int main()
 {
